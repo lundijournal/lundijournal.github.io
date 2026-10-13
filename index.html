@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>海鹦日记 — 安静地，写下真实的自己</title>
+<title>海鹦日记 — 私密、安全、安静的日记本</title>
 <meta name="description" content="海鹦日记：一个安静的私密日记 App。没有账号，没有服务器，没有广告。你写下的每一个字，只保存在你的 iPhone 和你自己的 iCloud 里。">
 <meta property="og:title" content="海鹦日记 — 安静地，写下真实的自己">
 <meta property="og:description" content="没有账号，没有打卡，也没有人在看。写下来，只给自己看。">
@@ -11,99 +11,145 @@
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="images/icon.png">
 <link rel="apple-touch-icon" href="images/icon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="home.css?v=5">
 </head>
-<body>
+<body class="home">
 <header class="nav">
   <div class="nav-in">
     <a class="brand" href="./"><img src="images/icon.png" alt=""><span>海鹦日记</span></a>
     <nav class="nav-links">
+      <a href="#features">功能</a>
+      <a href="#privacy">隐私</a>
       <a href="support.html">帮助</a>
-      <a href="privacy.html">隐私政策</a>
-      <a href="terms.html">使用条款</a>
     </nav>
   </div>
 </header>
 
 <main>
+  <!-- 首屏：左边一句话，右边两台手机 -->
   <section class="hero">
-    <img class="icon" src="images/icon.png" alt="海鹦日记的图标">
-    <h1>安静地，<br>写下真实的自己</h1>
-    <p>没有账号，没有打卡，也没有人在看。<br>你写下的每一个字，只保存在你的 iPhone 和你自己的 iCloud 里。</p>
-    <!-- 上架后换成 App Store 的链接和官方的“在 App Store 下载”标识 -->
-    <a class="badge" href="#" aria-disabled="true">在 App Store 下载</a>
-    <span class="badge-note">即将上架 · 免费下载，iOS 17 及以上</span>
-  </section>
-
-  <section class="shots" aria-label="界面截图">
-    <figure>
-      <picture><source srcset="images/shot1-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/shot1-light.jpg" alt="今天页" loading="lazy"></picture>
-      <figcaption>打开就能写</figcaption>
-    </figure>
-    <figure>
-      <picture><source srcset="images/shot2-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/shot2-light.jpg" alt="一篇日记" loading="lazy"></picture>
-      <figcaption>写完整的一篇</figcaption>
-    </figure>
-    <figure>
-      <picture><source srcset="images/shot3-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/shot3-light.jpg" alt="书架" loading="lazy"></picture>
-      <figcaption>一年，一本书</figcaption>
-    </figure>
-    <figure>
-      <picture><source srcset="images/shot4-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/shot4-light.jpg" alt="写给未来的信" loading="lazy"></picture>
-      <figcaption>写给未来的自己</figcaption>
-    </figure>
-    <figure>
-      <picture><source srcset="images/shot5-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/shot5-light.jpg" alt="拆开一封信" loading="lazy"></picture>
-      <figcaption>到了那一天，才能打开</figcaption>
-    </figure>
-    <figure>
-      <picture><source srcset="images/shot6-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/shot6-light.jpg" alt="解锁" loading="lazy"></picture>
-      <figcaption>只属于你</figcaption>
-    </figure>
-  </section>
-
-  <section class="features">
-    <div class="feature">
-      <h3>安静地写</h3>
-      <p>标题、正文、心情、照片、所在的城市，想加就加。没写完也不会丢，放在“未完待续”里，想写的时候再回来。凌晨写的日记算作前一天。</p>
+    <div class="hero-text reveal">
+      <p class="eyebrow">私密 · 安全 · 安静的日记本</p>
+      <h1>安静地，<br>写下真实的自己</h1>
+      <p class="lede">没有账号，没有打卡，也没有人在看。<br>你写下的每一个字，只保存在你的 iPhone 和你自己的 iCloud 里。</p>
+      <!-- 上架后换成 App Store 的链接和官方的“在 App Store 下载”标识 -->
+      <a class="cta" href="#" aria-disabled="true">即将上架 App Store</a>
+      <p class="cta-note">免费下载 · iPhone · iOS 17 及以上</p>
     </div>
-    <div class="feature">
-      <h3>一年，一本书</h3>
-      <p>每一年的日记自动收成一本书，可以改书名、换封面、选纸张。时间线和全年日历，翻回某一天很快。</p>
-    </div>
-    <div class="feature">
-      <h3>写给未来</h3>
-      <p>给未来的自己写一封信，选好哪一天打开。到那一天之前，信是封着的；读完还可以回一封，写给更远的未来。</p>
-    </div>
-    <div class="feature">
-      <h3>只属于你</h3>
-      <p>应用锁、日记本锁、信箱锁，用面容 ID 或数字密码解开。切到后台时自动盖住屏幕。不接入任何广告、统计和追踪工具。</p>
-    </div>
-    <div class="feature">
-      <h3>随时可以带走</h3>
-      <p>备份成公开的通用格式，以后可以完整恢复；也能导出成 Markdown，或排成一本 PDF 打印出来（PDF 是 Pro 功能）。</p>
-    </div>
-    <div class="feature">
-      <h3>从别处搬过来</h3>
-      <p>支持 Markdown、文本和常见日记 App 的导出文件，也可以直接粘贴文字。导入前先看一遍，导入后可以整次撤销。导入永远免费。</p>
+    <div class="hero-phones reveal">
+      <div class="phone back"><picture><source srcset="images/s-detail-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/s-detail-light.jpg" alt="一篇日记" width="600" height="1305"></picture></div>
+      <div class="phone front"><picture><source srcset="images/s-today-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/s-today-light.jpg" alt="今天页" width="600" height="1305"></picture></div>
     </div>
   </section>
 
-  <section class="promise">
+  <!-- 功能：一屏讲一件事，文字和截图左右交替 -->
+  <section class="feature" id="features">
+    <div class="f-text reveal">
+      <p class="kicker">安静地写</p>
+      <h2>打开就能写</h2>
+      <p>今天的日期、一句提示语，下面就是一页纸。心情、照片、所在的城市，想加就加；不想加，就只写几句话。没写完也不会丢，想写的时候再回来。</p>
+    </div>
+    <div class="f-media reveal">
+      <div class="phone"><picture><source srcset="images/s-write-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/s-write-light.jpg" alt="写作页" width="600" height="1305" loading="lazy"></picture></div>
+    </div>
+  </section>
+
+  <section class="feature flip">
+    <div class="f-text reveal">
+      <p class="kicker">珍藏</p>
+      <h2>一年，一本书</h2>
+      <p>每一年的日记，自动收成一本书。改个书名，换一张封面，选一种喜欢的纸。几年以后，书架上就是你走过的日子。</p>
+    </div>
+    <div class="f-media reveal">
+      <div class="phone"><picture><source srcset="images/s-shelf-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/s-shelf-light.jpg" alt="书架" width="600" height="1305" loading="lazy"></picture></div>
+    </div>
+  </section>
+
+  <section class="covers reveal" aria-label="封面">
+    <div class="cover-row">
+      <img src="images/covers/lighthouse.jpg" alt="雾中灯塔" loading="lazy">
+      <img src="images/covers/cat-window.jpg" alt="窗边的猫" loading="lazy">
+      <img src="images/covers/lupine.jpg" alt="羽扇豆" loading="lazy">
+      <img src="images/covers/polar-night.jpg" alt="极夜" loading="lazy">
+      <img src="images/covers/flower-cat.jpg" alt="花丛橘猫" loading="lazy">
+      <img src="images/covers/moon-boat.jpg" alt="月夜小舟" loading="lazy">
+      <img src="images/covers/cloud-flowers.jpg" alt="云朵上的花" loading="lazy">
+      <img src="images/covers/cat-nap.jpg" alt="午睡" loading="lazy">
+    </div>
+    <p class="caption">每一年，都可以换一张喜欢的封面</p>
+  </section>
+
+  <section class="feature">
+    <div class="f-text reveal">
+      <p class="kicker">回看</p>
+      <h2>翻回某一天</h2>
+      <p>按时间线一篇一篇往下读，或者在全年日历上点开某一天。想找哪一篇，搜一下就到。</p>
+    </div>
+    <div class="f-media pair reveal">
+      <div class="phone"><picture><source srcset="images/s-timeline-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/s-timeline-light.jpg" alt="时间线" width="600" height="1305" loading="lazy"></picture></div>
+      <div class="phone low"><picture><source srcset="images/s-calendar-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/s-calendar-light.jpg" alt="全年日历" width="600" height="1305" loading="lazy"></picture></div>
+    </div>
+  </section>
+
+  <section class="feature flip">
+    <div class="f-text reveal">
+      <p class="kicker">时间胶囊</p>
+      <h2>写给未来的自己</h2>
+      <p>给未来的自己写一封信，选好哪一天打开。在那之前，信一直封着，谁也看不到；到了那一天，会轻轻提醒你。读完，还可以回一封，写给更远的未来。</p>
+    </div>
+    <div class="f-media pair reveal">
+      <div class="phone"><picture><source srcset="images/s-sealed-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/s-sealed-light.jpg" alt="一封到期的信" width="600" height="1305" loading="lazy"></picture></div>
+      <div class="phone low"><picture><source srcset="images/s-opened-dark.jpg" media="(prefers-color-scheme: dark)"><img src="images/s-opened-light.jpg" alt="拆开的信" width="600" height="1305" loading="lazy"></picture></div>
+    </div>
+  </section>
+
+  <!-- 安全：换成深色的一屏 -->
+  <section class="night" id="privacy">
+    <div class="night-in">
+      <div class="f-text reveal">
+        <p class="kicker">安全、私密</p>
+        <h2>只属于你</h2>
+        <div class="points">
+          <div><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><b>三把锁</b><p>应用锁、日记本锁、信箱锁，用面容 ID 或数字密码解开。</p></div>
+          <div><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M6 8h12v8H6z" opacity=".35"/></svg></span><b>切走就遮住</b><p>切到后台时自动盖住屏幕，多任务界面里看不到你的日记。</p></div>
+          <div><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/></svg></span><b>没有服务器</b><p>日记只在你的 iPhone 和你自己的 iCloud 里，我们看不到任何内容。</p></div>
+          <div><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></span><b>不追踪你</b><p>不接入任何广告、统计和追踪工具，不记录你在 App 里做了什么。</p></div>
+        </div>
+      </div>
+      <div class="f-media reveal">
+        <div class="phone"><img src="images/s-lock-dark.jpg" alt="解锁页" width="600" height="1305" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="carry">
+    <div class="head reveal">
+      <p class="kicker">随时可以带走</p>
+      <h2>日记永远是你的</h2>
+    </div>
+    <div class="cards reveal">
+      <div class="card"><b>完整备份</b><p>公开的通用格式（.zip），换手机、换 App 都能完整恢复。</p></div>
+      <div class="card"><b>Markdown</b><p>每一篇导出成文字文件，任何地方都能打开。</p></div>
+      <div class="card"><b>PDF 精排</b><p>排成一本书的样子，可以打印成册。</p></div>
+    </div>
+    <p class="caption reveal">从别处搬过来也很简单：支持 Markdown、文本和常见日记 App 的导出文件。</p>
+  </section>
+
+  <section class="promise reveal">
     <h2>我们的承诺</h2>
-    <ul>
-      <li>你不用注册，也不用留下任何个人信息。日记只存在你的 iPhone 和你自己的 iCloud 里，我们看不到。</li>
-      <li>我们不放广告，不卖数据，也不会悄悄记下你在 App 里做了什么。</li>
-      <li>写下的日记永远是你的。想带走的时候，随时可以完整导出。</li>
-      <li>即使有一天你不再付费，写过的每一篇也都还在，照样能看、能导出。</li>
-      <li>我们不会催你，也不需要你打卡。隔了很久再回来，它也还在这里。</li>
-    </ul>
+    <ol>
+      <li><b>我们看不到你的日记</b><span>没有账号，没有服务器</span></li>
+      <li><b>不放广告，不卖数据</b><span>也不追踪你在 App 里做了什么</span></li>
+      <li><b>日记永远是你的</b><span>随时可以完整带走</span></li>
+      <li><b>不催促，不打卡</b><span>隔了很久再回来，它还在</span></li>
+    </ol>
   </section>
 
-  <section class="pro">
-    <h2>海鹦日记 Pro</h2>
-    <p>免费版可以一直用下去：日记、心情、照片（每篇 3 张）、搜索、日历、iCloud 同步、三把锁、备份和恢复、导入、Markdown 导出，都免费。</p>
-    <p>Pro 增加每篇最多 9 张照片、不限数量的写给未来的信、更多封面和内页、用自己的照片做封面、PDF 精排。<br>月度 ¥7 · 年度 ¥36 · 终身 ¥88</p>
+  <section class="final reveal">
+    <img src="images/icon.png" alt="" width="88" height="88">
+    <h2>从今天开始，<br>写给自己</h2>
+    <a class="cta" href="#" aria-disabled="true">即将上架 App Store</a>
   </section>
 </main>
 
@@ -118,5 +164,20 @@
     </span>
   </div>
 </footer>
+
+<script>
+// 往下滑时轻轻浮现；不喜欢动效的系统设置下直接显示
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function (e) { e.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function (e) { io.observe(e); });
+})();
+</script>
 </body>
 </html>

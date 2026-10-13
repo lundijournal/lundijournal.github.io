@@ -91,38 +91,6 @@ details[open] summary::after { content: "−"; }
 details .a { padding: 0 18px 14px; color: var(--ink2); }
 details .a p { margin: 0 0 8px; }
 
-/* 首页 */
-.hero { max-width: 960px; margin: 0 auto; padding: 72px 20px 40px; text-align: center; }
-.hero img.icon { width: 96px; height: 96px; border-radius: 22px; margin: 0 auto 22px; border: 1px solid var(--line); box-shadow: 0 6px 24px rgba(0,0,0,.06); }
-.hero h1 { font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.35; margin: 0 0 14px; letter-spacing: .04em; }
-.hero p { color: var(--ink2); font-size: 17px; margin: 0 auto; max-width: 520px; }
-.badge {
-  display: inline-flex; align-items: center; gap: 8px; margin-top: 28px;
-  background: var(--accent); color: var(--paper); border-radius: 14px; padding: 12px 22px; font-size: 15px;
-}
-.badge:hover { text-decoration: none; opacity: .92; }
-.badge-note { display: block; margin-top: 10px; color: var(--muted); font-size: 13px; }
-
-.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 960px; margin: 24px auto 0; padding: 0 20px; }
-.shots figure { margin: 0; }
-.shots img { border-radius: 22px; border: 1px solid var(--line); background: var(--card); }
-.shots figcaption { text-align: center; color: var(--ink2); font-size: 14px; margin-top: 10px; }
-@media (max-width: 720px) { .shots { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
-
-.features { max-width: 960px; margin: 64px auto 0; padding: 0 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.feature { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; }
-.feature h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; margin: 0 0 8px; }
-.feature p { color: var(--ink2); margin: 0; font-size: 15px; }
-@media (max-width: 720px) { .features { grid-template-columns: 1fr; } }
-
-.promise { max-width: 720px; margin: 72px auto 0; padding: 0 20px; text-align: center; }
-.promise h2 { font-family: var(--serif); font-weight: 400; font-size: 26px; margin: 0 0 18px; }
-.promise ul { list-style: none; padding: 0; margin: 0; color: var(--ink2); }
-.promise li { margin: 8px 0; }
-
-.pro { max-width: 720px; margin: 64px auto 0; padding: 0 20px; text-align: center; color: var(--ink2); }
-.pro h2 { font-family: var(--serif); font-weight: 400; font-size: 26px; color: var(--ink); margin: 0 0 12px; }
-
 /* 页脚 */
 footer { border-top: 1px solid var(--line); margin-top: 80px; }
 .foot { max-width: 960px; margin: 0 auto; padding: 24px 20px 40px; color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
