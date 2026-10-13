@@ -1,0 +1,130 @@
+/* 海鹦日记的网站：和 App 一样的燕麦白、炭灰、雾蓝灰；标题宋体，正文苹方。跟随系统的深浅色。 */
+:root {
+  --paper: #F4F3EF;
+  --card: #FBFAF7;
+  --ink: #2C3033;
+  --ink2: #5B6166;
+  --muted: #656A6E;
+  --line: #E3E2DC;
+  --accent: #4E6470;
+  --soft: #E7ECEC;
+  --serif: "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1C1F22;
+    --card: #24282C;
+    --ink: #E6E4DF;
+    --ink2: #B5B9BB;
+    --muted: #989EA1;
+    --line: #33383D;
+    --accent: #8299A6;
+    --soft: #242D33;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+
+/* 顶栏 */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: saturate(140%) blur(12px);
+  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-in {
+  max-width: 960px; margin: 0 auto; padding: 12px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-family: var(--serif); font-size: 18px; }
+.brand img { width: 30px; height: 30px; border-radius: 7px; border: 1px solid var(--line); }
+.brand:hover { text-decoration: none; }
+.nav-links { display: flex; gap: 18px; font-size: 14px; }
+.nav-links a { color: var(--ink2); }
+.nav-links a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+@media (max-width: 560px) { .nav-links { gap: 12px; font-size: 13px; } .brand span { display: none; } }
+
+/* 文章类页面（隐私政策、使用条款、技术支持） */
+.page { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+.page h1 { font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1.4; margin: 0 0 6px; letter-spacing: .02em; }
+.page .meta { color: var(--muted); font-size: 13px; margin: 0 0 32px; }
+.page h2 { font-family: var(--serif); font-weight: 400; font-size: 22px; margin: 44px 0 12px; }
+.page h3 { font-size: 16px; margin: 28px 0 6px; }
+.page p, .page li { color: var(--ink2); }
+.page strong { color: var(--ink); }
+.page ul { padding-left: 1.2em; }
+.page li { margin: 4px 0; }
+.lead {
+  background: var(--soft); border: 1px solid var(--line); border-radius: 16px;
+  padding: 18px 20px; color: var(--ink) !important; font-size: 17px; margin: 0 0 8px;
+}
+.table-wrap { overflow-x: auto; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { color: var(--ink); font-weight: 600; background: color-mix(in srgb, var(--card) 70%, var(--line)); }
+td { color: var(--ink2); }
+tr:last-child td { border-bottom: 0; }
+.todo { background: color-mix(in srgb, #E4E1CF 70%, transparent); color: var(--ink); border-radius: 4px; padding: 0 4px; font-size: .92em; }
+@media (prefers-color-scheme: dark) { .todo { background: #4A4632; } }
+
+/* 常见问题 */
+details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin: 10px 0; }
+summary { cursor: pointer; padding: 14px 18px; color: var(--ink); list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--muted); }
+details[open] summary::after { content: "−"; }
+details .a { padding: 0 18px 14px; color: var(--ink2); }
+details .a p { margin: 0 0 8px; }
+
+/* 首页 */
+.hero { max-width: 960px; margin: 0 auto; padding: 72px 20px 40px; text-align: center; }
+.hero img.icon { width: 96px; height: 96px; border-radius: 22px; margin: 0 auto 22px; border: 1px solid var(--line); box-shadow: 0 6px 24px rgba(0,0,0,.06); }
+.hero h1 { font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.35; margin: 0 0 14px; letter-spacing: .04em; }
+.hero p { color: var(--ink2); font-size: 17px; margin: 0 auto; max-width: 520px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 28px;
+  background: var(--accent); color: var(--paper); border-radius: 14px; padding: 12px 22px; font-size: 15px;
+}
+.badge:hover { text-decoration: none; opacity: .92; }
+.badge-note { display: block; margin-top: 10px; color: var(--muted); font-size: 13px; }
+
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 960px; margin: 24px auto 0; padding: 0 20px; }
+.shots figure { margin: 0; }
+.shots img { border-radius: 22px; border: 1px solid var(--line); background: var(--card); }
+.shots figcaption { text-align: center; color: var(--ink2); font-size: 14px; margin-top: 10px; }
+@media (max-width: 720px) { .shots { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+
+.features { max-width: 960px; margin: 64px auto 0; padding: 0 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.feature { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; }
+.feature h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; margin: 0 0 8px; }
+.feature p { color: var(--ink2); margin: 0; font-size: 15px; }
+@media (max-width: 720px) { .features { grid-template-columns: 1fr; } }
+
+.promise { max-width: 720px; margin: 72px auto 0; padding: 0 20px; text-align: center; }
+.promise h2 { font-family: var(--serif); font-weight: 400; font-size: 26px; margin: 0 0 18px; }
+.promise ul { list-style: none; padding: 0; margin: 0; color: var(--ink2); }
+.promise li { margin: 8px 0; }
+
+.pro { max-width: 720px; margin: 64px auto 0; padding: 0 20px; text-align: center; color: var(--ink2); }
+.pro h2 { font-family: var(--serif); font-weight: 400; font-size: 26px; color: var(--ink); margin: 0 0 12px; }
+
+/* 页脚 */
+footer { border-top: 1px solid var(--line); margin-top: 80px; }
+.foot { max-width: 960px; margin: 0 auto; padding: 24px 20px 40px; color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+.foot a { color: var(--muted); }
+.foot .links { display: flex; gap: 16px; flex-wrap: wrap; }
