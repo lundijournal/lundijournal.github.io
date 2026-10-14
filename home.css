@@ -68,6 +68,10 @@
 .hero-phones .front { --pw: 290px; transform: translateX(18%) rotate(2deg); z-index: 2; }
 .hero-phones .back { --pw: 256px; transform: translateX(-42%) translateY(36px) rotate(-7deg); z-index: 1; filter: saturate(.92); }
 
+/* 小图标（“只属于你”那一屏用）：圆形浅底 + 线条图标 */
+.ic { display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--soft); color: var(--accent); }
+.ic svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
 /* 功能：一屏一件事 */
 .feature { max-width: 1120px; margin: 0 auto; padding: 120px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 .feature.flip .f-text { order: 2; }

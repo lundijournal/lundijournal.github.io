@@ -96,3 +96,12 @@ footer { border-top: 1px solid var(--line); margin-top: 80px; }
 .foot { max-width: 960px; margin: 0 auto; padding: 24px 20px 40px; color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
 .foot a { color: var(--muted); }
 .foot .links { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* 语言切换（2026-10-14 三种语言）：顶栏右边的浅色小字 */
+.nav-links a.lang { color: var(--muted); font-size: 13px; }
+.nav-links a.lang:first-of-type { margin-left: 6px; padding-left: 14px; border-left: 1px solid var(--line); }
+@media (max-width: 560px) { .nav-links a.lang:first-of-type { margin-left: 0; padding-left: 10px; } }
+
+/* 英文页（/en/）：标题用英文衬线体，不用宋体里的英文字母 */
+html[lang="en"] { --serif: "New York", ui-serif, "Iowan Old Style", Georgia, serif; }
+html[lang="en"] body { line-height: 1.7; }
