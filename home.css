@@ -79,6 +79,7 @@
 .f-text { max-width: 470px; }
 .feature.flip .f-text { justify-self: end; }
 .f-text > p { color: var(--ink2); font-size: 18px; line-height: 1.95; margin: 0; }
+.f-text > p + p { margin-top: .8em; }
 .f-media { position: relative; display: flex; justify-content: center; align-items: flex-start; gap: 28px; }
 .f-media::before {
   content: ""; position: absolute; z-index: -1; left: 50%; top: 50%; width: 520px; height: 520px; max-width: 120%;
@@ -175,3 +176,9 @@
   .promise ol { grid-template-columns: 1fr; }
   .cover-row img { width: 104px; }
 }
+
+/* 日文按词组换行（支持的浏览器）；韩文按词换行，不在一个词中间断开 */
+html:lang(ja) body { word-break: auto-phrase; }
+html:lang(ko) body { word-break: keep-all; }
+/* 日文、韩文的大标题一行字多：字号小一点、字距收一点 */
+html:lang(ja) .hero h1, html:lang(ko) .hero h1 { font-size: clamp(34px, 4.8vw, 58px); letter-spacing: .02em; }
